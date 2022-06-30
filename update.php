@@ -9,8 +9,9 @@
     $qualification= $_POST['qualifcation'];
     $degree_year= $_POST['degree_year'];
     $experience= $_POST['experience'];
+    $password = $_POST['password'];
 
- $qu = " update users set id=$id, name='$name', email='$email', phone='$phone', qualifcation='$qualifcation', degree_year='$degree_year', experience='$experience' where id=$id  ";
+ $qu = " update users set id=$id, name='$name', email='$email', phone='$phone', qualifcation='$qualifcation', degree_year='$degree_year', experience='$experience' , password='$password' where id=$id  ";
 
  $query = mysqli_query($cont,$qu);
  header('location:disply.php');
@@ -23,7 +24,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title></title>
     <!-- bootstrap 4 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <!-- Font Awesome for loader -->
@@ -46,15 +47,16 @@
  <input type="text" name="name" class="form-control"> <br>
  <label> email: </label>
  <input type="email" name="email" class="form-control"> <br>
-  <label> phone: </label>
+ <label> phone: </label>
  <input type="text" name="phone" class="form-control"> <br>
-<label> qualification: </label>
+ <label> qualification: </label>
  <input type="text" name="qualifcation" class="form-control"> <br>
  <label> degree year: </label>
  <input type="text" name="degree_year" class="form-control"> <br>
  <label> total experience: </label>
  <input type="text" name="total_experience" class="form-control"> <br>
-
+ <label> password: </label>
+ <input type="password" name="password" class="form-control"> <br>
  <button class="btn btn-success" type="submit" name="sub"> Submit </button><br>
 
  </div>

@@ -31,6 +31,7 @@
  <th> Qualificatin</th>
  <th> Degree Year</th>
  <th> Experience</th>
+ <th> Password</th>
  <th> Delete </th>
  <th> Update </th>
 
@@ -52,6 +53,7 @@ while($re = mysqli_fetch_array($query)){
  <td> <?php echo $re['qualifcation'];  ?> </td>
  <td> <?php echo $re['degree_year'];  ?> </td>
  <td> <?php echo $re['experience'];  ?> </td>
+ <td> <?php echo $re['password'];  ?> </td>
  <td> <button class="btn-danger btn"> <a href="delete.php?id=<?php echo $re['id']; ?>" class="text-white"> Delete </a>  </button> </td>
  <td> <button class="btn-primary btn"> <a href="update.php?id = <?php echo $re['id']; ?>" class="text-white"> Update </a> </button> </td>
 
